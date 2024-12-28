@@ -24,7 +24,7 @@ public class FormItemController {
         return "form/items";
     }
 
-    @GetMapping("/{itemId}")
+    @GetMapping("/{itemId}") // 상품 상세
     public String item(@PathVariable long itemId, Model model) {
         Item item = itemRepository.findById(itemId);
         model.addAttribute("item", item);
